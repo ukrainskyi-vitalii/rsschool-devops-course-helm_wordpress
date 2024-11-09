@@ -169,7 +169,7 @@ jobs:
                 # Show all pods 
                 /usr/local/bin/kubectl get pods &&
 
-                # Show all services
+                # Show all services running
                 /usr/local/bin/kubectl get svc
             "
 
