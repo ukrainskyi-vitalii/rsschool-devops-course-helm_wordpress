@@ -167,10 +167,10 @@ jobs:
                 /usr/local/bin/helm install wordpress ./ -f values.yaml && 
               
                 # Show all pods 
-                kubectl get pods &&
+                /usr/local/bin/kubectl get pods &&
 
                 # Show all services
-                kubectl get svc
+                /usr/local/bin/kubectl get svc
             "
 
       - name: Cleanup SSH Key
