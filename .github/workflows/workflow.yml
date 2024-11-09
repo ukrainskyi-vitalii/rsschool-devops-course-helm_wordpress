@@ -126,6 +126,9 @@ jobs:
       - name: Deploy Wordpress
         run: |
             ssh -o StrictHostKeyChecking=no -i private_key ${{ env.USER_NAME }}@${{ env.HOSTNAME }} "
+                # Install git on EC2 instance
+                sudo yum install -y git &&
+
                 # Install k3s
                 curl -sfL https://get.k3s.io | sh -
      
