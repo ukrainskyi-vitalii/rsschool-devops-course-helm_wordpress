@@ -113,6 +113,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
   
+      - name: Install Git
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git
+
       - name: Setup SSH Key
         run: |
           echo "${{ env.SSH_PRIVATE_KEY }}" > private_key
