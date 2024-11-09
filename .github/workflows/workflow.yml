@@ -164,7 +164,13 @@ jobs:
                 done &&
 
                 # Deploy WordPress using your Helm Chart
-                /usr/local/bin/helm install wordpress ./ -f values.yaml
+                /usr/local/bin/helm install wordpress ./ -f values.yaml && 
+              
+                # Show all pods 
+                kubectl get pods &&
+
+                # Show all services
+                kubectl get svc
             "
 
       - name: Cleanup SSH Key
